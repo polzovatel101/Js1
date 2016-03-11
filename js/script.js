@@ -8,11 +8,19 @@ function degree()
     var num = prompt("Введите число: ");
     var degreeOfNum = prompt("Введите степень: ");
 
-    for (var i = 0; i < degreeOfNum - 1; i++) {
-        num *= num;
+    var numFirst = num;
+    for(var i = 0; i < degreeOfNum-1; i++){
+        num *= numFirst;
     }
 
-    console.log('result = ', num);
+    if(degreeOfNum < 0) {
+        console.log('result = ', 1/num);
+    }
+    else {
+        console.log('result = ', num);
+    }
+
+
 }
 
 function searchName()
@@ -37,4 +45,4 @@ function searchName()
 }
 
 degree();
-searchName();
+//searchName();
