@@ -50,4 +50,4 @@ function searchName()
 }
 
 degree();
-//searchName();
+searchName();
