@@ -4,6 +4,7 @@
 
 function degree()
 {
+    'use strict';
     var num = prompt("Введите число: ");
     var degreeOfNum = prompt("Введите степень: ");
 
@@ -16,10 +17,10 @@ function degree()
 
 function searchName()
 {
+    'use strict';
     var arrOfName = ['', '', '', '', ''];
     var userName;
-    for(var i = 0; i < 5; i++) {
-        //arrOfName.push( prompt("Введите имя: ") );
+    for(var i = 0; i < 5; i++){
         arrOfName[i] = prompt("Введите имя: ");
     }
 
