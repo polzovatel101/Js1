@@ -9,16 +9,21 @@ function degree()
     var degreeOfNum = prompt("Введите степень: ");
 
     var numFirst = num;
-    for(var i = 0; i < degreeOfNum-1; i++){
-        num *= numFirst;
-    }
 
     if(degreeOfNum < 0) {
+        for(var i = 0; i < (degreeOfNum-1)*(-1); i++){
+            num *= numFirst;
+        }
         console.log('result = ', 1/num);
     }
     else {
+        for(i = 0; i < degreeOfNum-1; i++){
+            num *= numFirst;
+        }
         console.log('result = ', num);
     }
+
+    //console.log(1/num);
 
 
 }
