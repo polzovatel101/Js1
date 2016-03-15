@@ -31,22 +31,20 @@ function degree()
 function searchName()
 {
     'use strict';
-    var arrOfName = ['', '', '', '', ''];
-    var userName;
-    for(var i = 0; i < 5; i++){
+    var arrOfName = [],
+        userName;
+    for(var i = 0; i < 5; i++) {
         arrOfName[i] = prompt("Введите имя: ");
     }
 
     userName = prompt("Введите имя пользователя: ");
-    for(i = 0; i < 5; i++)
-    {
+    for(i = 0; i < arrOfName.length-1; i++) {
         if(arrOfName[i] == userName) {
             alert(userName + ', вы успешно вошли!');
             return 0;// успешно пройдена проверка безопасности
         }
     }
     alert("Error 404, name not found!");
-
 }
 
 degree();
