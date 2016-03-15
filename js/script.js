@@ -7,23 +7,25 @@ function degree()
     'use strict';
     var num = prompt("Введите число: ");
     var degreeOfNum = prompt("Введите степень: ");
-
-    var numFirst = num;
-
-    if(degreeOfNum < 0) {
-        for(var i = 0; i < (degreeOfNum-1)*(-1); i++){
-            num *= numFirst;
-        }
-        console.log('result = ', 1/num);
+    if(degreeOfNum == 0) {
+        console.log('result = 1');
     }
     else {
-        for(i = 0; i < degreeOfNum-1; i++){
-            num *= numFirst;
-        }
-        console.log('result = ', num);
-    }
+        var numFirst = num;
 
-    //console.log(1/num);
+        if (degreeOfNum < 0) {
+            for (var i = 0; i < (degreeOfNum - 1) * (-1); i++) {
+                num *= numFirst;
+            }
+            console.log('result = ', 1 / num);
+        }
+        else {
+            for (i = 0; i < degreeOfNum - 1; i++) {
+                num *= numFirst;
+            }
+            console.log('result = ', num);
+        }
+    }
 
 
 }
