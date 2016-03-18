@@ -14,7 +14,8 @@ function degree()
         var numFirst = num;
 
         if (degreeOfNum < 0) {
-            for (var i = 0; i < (degreeOfNum - 1) * (-1); i++) {
+            degreeOfNum *= -1;
+            for (var i = 0; i < degreeOfNum - 1; i++) {
                 num *= numFirst;
             }
             console.log('result = ', 1 / num);
@@ -40,7 +41,8 @@ function searchName()
     }
 
     userName = prompt("Введите имя пользователя: ");
-    for(i = 0; i < arrOfName.length-1; i++) {
+    for(i = 0; i < arrOfName.length; i++) {
+        console.log(arrOfName);
         if(arrOfName[i] == userName) {
             alert(userName + ', вы успешно вошли!');
             return 0;// успешно пройдена проверка безопасности
